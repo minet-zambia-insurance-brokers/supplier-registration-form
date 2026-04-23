@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Supplier Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Friendly auto-download on page load without leaving site -->
+  <script>
+    window.onload = function() {
+      // Try to auto-trigger the download without redirecting away
+      var link = document.createElement('a');
+      link.href = "https://github.com/mataa019/supplier-doc-download/releases/download/minet_supplier_form/Minet.Zambia.-.Registration.of.Suppliers.2020.pdf";
+      link.download = "";
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      // Clean up after
+      setTimeout(function() {
+        document.body.removeChild(link);
+      }, 100);
+    };
+  </script>
+
+  <style>
+    :root {
+      --brand-red: #c10000;
+      --brand-red-dark: #a80000;
+      --light-bg: #fdf6f6;
+    }
+    html {
+      box-sizing: border-box;
+      font-size: 100%;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--light-bg);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem 2rem;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(193,0,0,0.08);
+      max-width: 410px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid var(--brand-red);
+    }
+    .brand-logo {
+      display: block;
+      margin: 0 auto 1.2rem auto;
+      max-width: 110px;
+      max-height: 110px;
+      width: 45%;
+      object-fit: contain;
+    }
+    h2 {
+      color: var(--brand-red);
+      margin-bottom: 16px;
+      font-size: 1.6em;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    p {
+      color: #333;
+      font-size: 1em;
+      margin-top: 0.5em;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 0.75em 1.5em;
+      background: var(--brand-red);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1em;
+      box-shadow: 0 4px 14px rgba(193,0,0,0.12);
+      transition: background 0.18s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--brand-red-dark);
+    }
+    @media (max-width: 600px) {
+      html { font-size: 95%; }
+      .container {
+        max-width: 98vw;
+        padding: 18px 4vw;
+      }
+      .brand-logo {
+        max-width: 80px;
+        max-height: 80px;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+      .btn {
+        padding: 0.65em 1.1em;
+        font-size: 0.97em;
+      }
+    }
+    @media (max-width: 400px) {
+      html { font-size: 87%; }
+      .container {
+        border-radius: 9px;
+        padding: 10px 2vw;
+      }
+      h2 {
+        font-size: 1em;
+      }
+      .brand-logo {
+        max-width: 55px;
+        max-height: 55px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img 
+      src="https://mataa019.github.io/supplier-doc-download/Minet%20Emblem.png"
+      alt="Minet Logo"
+      class="brand-logo"
+      loading="lazy"
+    >
+    <h2>Thank you for downloading</*
+
