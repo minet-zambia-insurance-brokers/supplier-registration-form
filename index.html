@@ -5,20 +5,15 @@
   <title>Download Supplier Registration Form</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Friendly auto-download on page load without leaving site -->
+  <!-- Auto download -->
   <script>
     window.onload = function() {
-      // Try to auto-trigger the download without redirecting away
       var link = document.createElement('a');
       link.href = "https://github.com/mataa019/supplier-doc-download/releases/download/minet_supplier_form/Minet.Zambia.-.Registration.of.Suppliers.2020.pdf";
       link.download = "";
-      link.style.display = "none";
       document.body.appendChild(link);
       link.click();
-      // Clean up after
-      setTimeout(function() {
-        document.body.removeChild(link);
-      }, 100);
+      setTimeout(() => document.body.removeChild(link), 100);
     };
   </script>
 
@@ -28,13 +23,11 @@
       --brand-red-dark: #a80000;
       --light-bg: #fdf6f6;
     }
-    html {
+
+    * {
       box-sizing: border-box;
-      font-size: 100%;
     }
-    *, *:before, *:after {
-      box-sizing: inherit;
-    }
+
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
       background: var(--light-bg);
@@ -43,90 +36,84 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
+
     .container {
       background: #fff;
-      padding: 2rem 2rem;
-      border-radius: 14px;
-      box-shadow: 0 8px 32px rgba(193,0,0,0.08);
-      max-width: 410px;
+      padding: clamp(20px, 4vw, 36px);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(193,0,0,0.08);
       width: 100%;
+      max-width: 420px;
       text-align: center;
       border: 2px solid var(--brand-red);
     }
+
     .brand-logo {
       display: block;
-      margin: 0 auto 1.2rem auto;
-      max-width: 110px;
-      max-height: 110px;
-      width: 45%;
+      margin: 0 auto 18px;
+      width: clamp(70px, 25%, 110px);
+      height: auto;
       object-fit: contain;
     }
+
     h2 {
       color: var(--brand-red);
-      margin-bottom: 16px;
-      font-size: 1.6em;
+      margin-bottom: 12px;
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
       font-weight: 700;
-      line-height: 1.2;
     }
+
     p {
       color: #333;
-      font-size: 1em;
-      margin-top: 0.5em;
-      line-height: 1.6;
+      font-size: clamp(0.95rem, 2vw, 1.05rem);
+      margin: 8px 0;
+      line-height: 1.5;
     }
+
     .btn {
       display: inline-block;
       margin-top: 24px;
-      padding: 0.75em 1.5em;
+      padding: 14px 24px;
+      width: 100%;
+      max-width: 260px;
       background: var(--brand-red);
       color: #fff;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: 600;
-      font-size: 1em;
+      font-size: 1rem;
       box-shadow: 0 4px 14px rgba(193,0,0,0.12);
-      transition: background 0.18s;
-      border: none;
-      cursor: pointer;
+      transition: all 0.2s ease;
     }
-    .btn:hover, .btn:focus {
+
+    .btn:hover {
       background: var(--brand-red-dark);
+      transform: translateY(-1px);
     }
-    @media (max-width: 600px) {
-      html { font-size: 95%; }
+
+    /* Ultra small devices */
+    @media (max-width: 360px) {
       .container {
-        max-width: 98vw;
-        padding: 18px 4vw;
+        padding: 16px;
       }
-      .brand-logo {
-        max-width: 80px;
-        max-height: 80px;
-      }
+
       h2 {
-        font-size: 1.2em;
-      }
-      .btn {
-        padding: 0.65em 1.1em;
-        font-size: 0.97em;
+        font-size: 1.3rem;
       }
     }
-    @media (max-width: 400px) {
-      html { font-size: 87%; }
+
+    /* Large screens (make it not look tiny) */
+    @media (min-width: 1200px) {
       .container {
-        border-radius: 9px;
-        padding: 10px 2vw;
-      }
-      h2 {
-        font-size: 1em;
-      }
-      .brand-logo {
-        max-width: 55px;
-        max-height: 55px;
+        max-width: 480px;
       }
     }
+
   </style>
 </head>
+
 <body>
 
   <div class="container">
@@ -136,5 +123,20 @@
       class="brand-logo"
       loading="lazy"
     >
-    <h2>Thank you for downloading</*
-
+
+    <h2>Thank you for downloading</h2>
+
+    <p><strong>Minet Zambia Supplier Registration Form</strong></p>
+
+    <p>If your download hasn’t started, kindly click the button below.</p>
+
+    <a 
+      class="btn" 
+      href="https://github.com/mataa019/supplier-doc-download/releases/download/minet_supplier_form/Minet.Zambia.-.Registration.of.Suppliers.2020.pdf"
+      download>
+      Download File
+    </a>
+  </div>
+
+</body>
+</html>
